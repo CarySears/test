@@ -15,11 +15,11 @@
   <body>
     <header class="site-header" id="site-header">
       <div class="container header-content">
-        <a href="#home" class="logo" aria-label="Anna Brooke Healing home">Anna Brooke</a>
+        <a href="/index.html#home" class="logo" aria-label="Anna Brooke Healing home">Anna Brooke</a>
         <nav class="nav" id="nav" aria-label="Primary">
-          <a href="#services" class="nav-link">Services</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a href="/index.html#services" class="nav-link">Services</a>
+          <a href="/index.html#about" class="nav-link">About</a>
+          <a href="/index.html#contact" class="nav-link">Contact</a>
         </nav>
         <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
           <span></span>
@@ -30,32 +30,42 @@
     </header>
 
     <main>
-      <!-- Split hero -->
-      <section id="home" class="hero hero-split" aria-label="Hero">
-        <div class="container hero-split-inner">
-          <div class="hero-copy">
+      <!-- Interactive chooser hero -->
+      <section id="home" class="home-chooser" aria-label="Choose a service">
+        <div class="container chooser-inner">
+          <div class="chooser-left">
             <h1 class="hero-title">Healing guidance for life’s transitions</h1>
-            <p class="hero-subtitle">
-              One-to-one sessions, workshops, and ceremonies that help you come
-              home to yourself with presence and compassion.
-            </p>
-            <div class="hero-cta">
-              <a href="#services" class="btn btn-primary">Explore services</a>
-              <a href="#contact" class="btn">Book a consultation</a>
-            </div>
-            <ul class="highlights">
-              <li>Trauma-aware and body-centered</li>
-              <li>Personal and community offerings</li>
-              <li>Welcoming all identities and life paths</li>
+            <p class="hero-subtitle">Choose a path below to learn more.</p>
+
+            <ul class="service-list" id="service-list">
+              <li>
+                <a class="service-link active" href="/healing.html" data-image="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1800&auto=format&fit=crop">
+                  <span class="service-name">Healing & Growth</span>
+                  <span class="service-note">Somatic presence, energy balancing, and integration</span>
+                </a>
+              </li>
+              <li>
+                <a class="service-link" href="/writing.html" data-image="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1800&auto=format&fit=crop">
+                  <span class="service-name">Writing & Creativity</span>
+                  <span class="service-note">Workshops, coaching, and spacious creative process</span>
+                </a>
+              </li>
+              <li>
+                <a class="service-link" href="/ceremonies.html" data-image="https://images.unsplash.com/photo-1529336953121-adb2fddf1ee5?q=80&w=1800&auto=format&fit=crop">
+                  <span class="service-name">Weddings & Ceremonies</span>
+                  <span class="service-note">Inclusive, personalized ceremonies for life’s milestones</span>
+                </a>
+              </li>
             </ul>
           </div>
-          <div class="hero-media">
-            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop" alt="Soft light and calm textures" />
+
+          <div class="chooser-right">
+            <div class="hero-preview" id="hero-preview" role="img" aria-label="Service preview image"></div>
           </div>
         </div>
       </section>
 
-      <!-- Services (text-forward) -->
+      <!-- Services (brief overview, text-forward) -->
       <section id="services" class="section section-tight services" aria-labelledby="services-title">
         <div class="container">
           <h2 id="services-title" class="section-title">Services</h2>
@@ -63,10 +73,8 @@
             <article class="service-item">
               <h3>Healing & Growth</h3>
               <p>
-                Gentle, present-centered sessions to support nervous system
-                regulation, emotional processing, and reconnecting with your own
-                clarity. Together we work with breath, grounding, and intention
-                to help you feel more resourced in daily life.
+                Present-centered sessions to support nervous system regulation,
+                emotional processing, and reconnecting with your own clarity.
               </p>
               <ul>
                 <li>Energy balancing and integration</li>
@@ -74,16 +82,15 @@
                 <li>Support through transitions and grief</li>
               </ul>
               <div class="service-cta">
-                <a href="#contact" class="btn">Inquire about sessions</a>
+                <a href="/healing.html" class="btn">Learn more</a>
               </div>
             </article>
 
             <article class="service-item">
               <h3>Writing & Creativity</h3>
               <p>
-                Workshops and mentoring that nurture your creative voice and
-                build spaciousness around your process. We explore rhythm,
-                curiosity, and compassion—so your work can unfold with more ease.
+                Workshops and mentoring that nurture your creative voice and build
+                sustainable practices for your work to unfold with more ease.
               </p>
               <ul>
                 <li>Creative coaching and accountability</li>
@@ -91,7 +98,7 @@
                 <li>Practices for sustainable creative flow</li>
               </ul>
               <div class="service-cta">
-                <a href="#contact" class="btn">Ask about workshops</a>
+                <a href="/writing.html" class="btn">Learn more</a>
               </div>
             </article>
 
@@ -104,10 +111,10 @@
               <ul>
                 <li>Weddings and commitment ceremonies</li>
                 <li>Transitions, memorials, and community rituals</li>
-                <li>Guidance on crafting meaningful vows and readings</li>
+                <li>Guidance on vows, readings, and ritual design</li>
               </ul>
               <div class="service-cta">
-                <a href="#contact" class="btn">Begin a conversation</a>
+                <a href="/ceremonies.html" class="btn">Learn more</a>
               </div>
             </article>
           </div>
@@ -120,15 +127,13 @@
           <div>
             <h2 id="about-title" class="section-title">About Anna</h2>
             <p>
-              I support individuals and groups through healing work that blends
-              intuitive listening with grounded tools you can use every day. My
-              approach is relational, trauma-aware, and deeply respectful of the
-              many ways humans heal.
+              I support individuals and groups through healing work that blends intuitive listening
+              with grounded tools you can use every day. My approach is relational, trauma-aware,
+              and deeply respectful of the many ways humans heal.
             </p>
             <p>
-              Over the years, I have held space for personal sessions, group
-              workshops, and ceremonies—always with the intention of helping
-              people reconnect with their own aliveness.
+              Over the years, I have held space for personal sessions, group workshops, and ceremonies—
+              always with the intention of helping people reconnect with their own aliveness.
             </p>
             <div class="about-ctas">
               <a href="#services" class="btn">See services</a>
