@@ -107,3 +107,12 @@ input:focus, textarea:focus { outline: 2px solid var(--brand-strong); border-col
   .services-grid { grid-template-columns: 1fr; }
   .highlights { grid-template-columns: 1fr; }
 }
+
+/* Electric blue + pink theme (home page only) */
+.theme-electric {
+  --bg: #00ffff;      /* electric blue */
+  --bg-elev: #00ffff; /* keep elevated surfaces same as bg to make page fully electric blue */
+  --text: #ff1493;    /* deep pink */
+  --muted: #ff79c6;   /* lighter pink for secondary text */
+}
+.theme-electric .site-header { background: var(--bg); }
