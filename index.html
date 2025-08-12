@@ -11,8 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./styles.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Anna Brooke Healing",
+      "url": "https://example.com/",
+      "description": "Healing & Growth, Writing & Creativity, and Ceremonies with compassionate support for life transitions.",
+      "areaServed": "Remote and local",
+      "sameAs": [],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "",
+        "addressRegion": "",
+        "addressCountry": "US"
+      }
+    }
+    </script>
   </head>
   <body class="theme-electric">
+    <a href="#main" class="skip-link">Skip to content</a>
     <header class="site-header" id="site-header">
       <div class="container header-content">
         <a href="/index.html#home" class="logo" aria-label="Anna Brooke Healing home">Anna Brooke</a>
@@ -29,7 +48,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <!-- Interactive chooser hero -->
       <section id="home" class="home-chooser" aria-label="Choose a service">
         <div class="container chooser-inner">
@@ -37,21 +56,26 @@
             <h1 class="hero-title">Healing guidance for life’s transitions</h1>
             <p class="hero-subtitle">Choose a path below to learn more.</p>
 
+            <div class="hero-cta" role="group" aria-label="Primary actions">
+              <a class="btn btn-primary" href="#book" id="book-call-hero">Book a free 15‑min call</a>
+              <a class="btn" href="#services" id="explore-services-hero">Explore services</a>
+            </div>
+
             <ul class="service-list" id="service-list">
               <li>
-                <a class="service-link active" href="/healing.html" data-image="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1800&auto=format&fit=crop">
+                <a class="service-link active" href="/healing.html" data-image="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1800&auto=format&fit=crop" aria-label="Learn more about Healing & Growth">
                   <span class="service-name">Healing & Growth</span>
                   <span class="service-note">Somatic presence, energy balancing, and integration</span>
                 </a>
               </li>
               <li>
-                <a class="service-link" href="/writing.html" data-image="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1800&auto=format&fit=crop">
+                <a class="service-link" href="/writing.html" data-image="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1800&auto=format&fit=crop" aria-label="Learn more about Writing & Creativity">
                   <span class="service-name">Writing & Creativity</span>
                   <span class="service-note">Workshops, coaching, and spacious creative process</span>
                 </a>
               </li>
               <li>
-                <a class="service-link" href="/ceremonies.html" data-image="https://images.unsplash.com/photo-1529336953121-adb2fddf1ee5?q=80&w=1800&auto=format&fit=crop">
+                <a class="service-link" href="/ceremonies.html" data-image="https://images.unsplash.com/photo-1529336953121-adb2fddf1ee5?q=80&w=1800&auto=format&fit=crop" aria-label="Learn more about Weddings & Ceremonies">
                   <span class="service-name">Weddings & Ceremonies</span>
                   <span class="service-note">Inclusive, personalized ceremonies for life’s milestones</span>
                 </a>
@@ -83,6 +107,7 @@
               </ul>
               <div class="service-cta">
                 <a href="/healing.html" class="btn">Learn more</a>
+                <a href="#book" class="btn btn-primary">Book call</a>
               </div>
             </article>
 
@@ -99,6 +124,7 @@
               </ul>
               <div class="service-cta">
                 <a href="/writing.html" class="btn">Learn more</a>
+                <a href="#book" class="btn btn-primary">Book call</a>
               </div>
             </article>
 
@@ -115,8 +141,61 @@
               </ul>
               <div class="service-cta">
                 <a href="/ceremonies.html" class="btn">Learn more</a>
+                <a href="#book" class="btn btn-primary">Book call</a>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking (Calendly) -->
+      <section id="book" class="section section-tight" aria-labelledby="book-title">
+        <div class="container">
+          <h2 id="book-title" class="section-title">Book a free 15‑minute consultation</h2>
+          <p class="section-lead">Find a time that works for you. No obligation—just a chance to connect and see what’s a fit.</p>
+          <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_CALENDLY_USERNAME/15min" aria-label="Scheduling widget"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <h2 id="testimonials-title" class="section-title">What clients say</h2>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial">
+              <p>“I felt calmer and clearer after our first session. Anna’s presence is grounding and kind.”</p>
+              <cite>— J.M.</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>“The workshop helped me reconnect with my voice. Practical and surprisingly fun.”</p>
+              <cite>— R.S.</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>“Our ceremony was exactly us. Thoughtful, inclusive, and beautifully held.”</p>
+              <cite>— L & P</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title" class="section-title">FAQ</h2>
+          <div class="faq-items">
+            <details>
+              <summary>Do you work remotely?</summary>
+              <p>Yes. Sessions and consultations are available via video call. In‑person options can be arranged where feasible.</p>
+            </details>
+            <details>
+              <summary>How long are sessions?</summary>
+              <p>Most sessions are 50–60 minutes. We’ll discuss what feels supportive for you during the consult.</p>
+            </details>
+            <details>
+              <summary>Is there a sliding scale?</summary>
+              <p>There are a limited number of sliding‑scale spots. We can talk about options during our call.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -137,7 +216,7 @@
             </p>
             <div class="about-ctas">
               <a href="#services" class="btn">See services</a>
-              <a href="#contact" class="btn btn-primary">Contact</a>
+              <a href="#book" class="btn btn-primary">Book call</a>
             </div>
           </div>
           <div class="about-media">
@@ -155,7 +234,7 @@
             <a href="mailto:hello@example.com">hello@example.com</a>.
           </p>
 
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" action="/thank-you.html">
             <input type="hidden" name="form-name" value="contact" />
             <p class="hidden">
               <label>Don’t fill this out: <input name="bot-field" /></label>
@@ -177,8 +256,8 @@
             </div>
 
             <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Send</button>
-              <a class="btn" href="mailto:hello@example.com">Email instead</a>
+              <button type="submit" class="btn btn-primary" id="contact-submit">Send</button>
+              <a class="btn" href="#book">Book a call instead</a>
             </div>
           </form>
         </div>
@@ -191,6 +270,13 @@
         <a href="#home" class="back-to-top" aria-label="Back to top">Back to top ↑</a>
       </div>
     </footer>
+
+    <div class="sticky-cta" role="region" aria-label="Quick actions">
+      <div class="container">
+        <span class="sticky-text">Have a question?</span>
+        <a class="btn btn-primary" href="#book" id="book-call-sticky">Book a free call</a>
+      </div>
+    </div>
 
     <script src="./script.js" defer></script>
   </body>

@@ -116,3 +116,58 @@ input:focus, textarea:focus { outline: 2px solid var(--brand-strong); border-col
   --muted: #ff79c6;   /* lighter pink for secondary text */
 }
 .theme-electric .site-header { background: var(--bg); }
+
+/* Accessibility: visible focus */
+:focus-visible {
+  outline: 3px solid #000; /* high-contrast outline */
+  outline-offset: 3px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: auto;
+  height: auto;
+  padding: 10px 14px;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  z-index: 2000;
+}
+
+/* Testimonials */
+.testimonials { padding: 56px 0; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.testimonial { background: var(--bg-elev); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 18px; }
+.testimonial cite { display: block; margin-top: 10px; color: var(--muted); font-style: normal; }
+
+/* FAQ */
+.faq { padding: 56px 0; }
+.faq-items { display: grid; gap: 12px; }
+.faq-items details { background: var(--bg-elev); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 14px; }
+.faq-items summary { font-weight: 600; cursor: pointer; }
+.faq-items p { margin: 10px 0 0; color: var(--muted); }
+
+/* Calendly embed */
+.calendly-inline-widget { min-width: 320px; height: 680px; }
+
+/* Sticky mobile CTA */
+.sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; display: none; background: var(--bg-elev); border-top: 1px solid rgba(255,255,255,0.12); z-index: 1500; }
+.sticky-cta .container { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; }
+.sticky-cta .sticky-text { color: var(--muted); font-size: 14px; }
+@media (max-width: 720px) { .sticky-cta { display: block; } }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
